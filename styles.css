@@ -348,6 +348,17 @@ h3 {
   color: var(--muted);
   text-align: center;
   font-weight: 800;
+  text-decoration: none;
+}
+
+.shot-placeholder:hover {
+  color: var(--ink);
+}
+
+.shot-placeholder.small {
+  min-height: 170px;
+  aspect-ratio: auto;
+  border: 1px dashed var(--line);
 }
 
 .shot-body {
@@ -431,6 +442,100 @@ h3 {
   flex-wrap: wrap;
 }
 
+.diary-hero {
+  padding: 80px 0 56px;
+}
+
+.compact {
+  padding: 48px 0;
+}
+
+.diary-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.filter-box {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.filter-box select {
+  min-width: 180px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.entry-list {
+  display: grid;
+  gap: 20px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.entry-content p {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+.entry-content ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: var(--ink);
+}
+
+.entry-shots {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.entry-shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.entry-shot img {
+  width: 100%;
+  display: block;
+}
+
+.entry-shot figcaption {
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 @media (max-width: 880px) {
   .nav {
     min-height: auto;
@@ -455,8 +560,15 @@ h3 {
   .grid.three,
   .gallery,
   .project-list,
-  .checklist {
+  .checklist,
+  .entry,
+  .entry-shots {
     grid-template-columns: 1fr;
+  }
+
+  .diary-head {
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 
@@ -482,4 +594,3 @@ h3 {
     min-height: 38px;
   }
 }
-

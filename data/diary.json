@@ -1,0 +1,59 @@
+[
+  {
+    "id": "multi-agent",
+    "date": "2026-05-10",
+    "title": "多 Agent 协作任务分配",
+    "type": "workflow",
+    "tags": ["TendrilFlow", "Harness", "Review"],
+    "summary": "用来展示 Host Agent 如何拆解任务、分派不同 Agent、汇总结果，并由人类完成最终判断。",
+    "notes": [
+      "场景：一个复杂任务需要同时做代码理解、方案比较和风险复核。",
+      "Agent 行为：拆分子任务、读取上下文、产出执行摘要和 handoff 信息。",
+      "人的判断：确认哪些结论可信、哪些需要复查、哪些可以进入下一步。"
+    ],
+    "screenshots": [
+      {
+        "src": "",
+        "caption": "待加入脱敏截图：任务分配与结果汇总"
+      }
+    ]
+  },
+  {
+    "id": "android-agent",
+    "date": "2026-05-10",
+    "title": "Android 设备侧 Agent 感知闭环",
+    "type": "android",
+    "tags": ["Android", "Accessibility", "UsageEvents"],
+    "summary": "用来展示移动端如何提供设备状态、使用统计、权限状态和可执行动作，支撑 Agent 做主动判断。",
+    "notes": [
+      "场景：Agent 需要理解设备使用状态，而不是只依赖用户输入。",
+      "Agent 行为：读取结构化状态，判断是否需要提醒、记录或触发下一步。",
+      "人的判断：限制权限范围，确认哪些数据适合长期保存。"
+    ],
+    "screenshots": [
+      {
+        "src": "",
+        "caption": "待加入脱敏截图：设备状态与统计面板"
+      }
+    ]
+  },
+  {
+    "id": "proactive-ai",
+    "date": "2026-05-10",
+    "title": "主动型 AI 的低噪声发现",
+    "type": "reflection",
+    "tags": ["MirrorAgent", "Memory", "Proactive AI"],
+    "summary": "用来展示 Agent 如何从个人上下文里做少量、高信号的发现，而不是频繁打扰用户。",
+    "notes": [
+      "场景：用户没有主动提问，但近期上下文里出现了值得提醒的模式。",
+      "Agent 行为：生成简短发现，提供下一步选项，而不是替用户做强决策。",
+      "人的判断：区分有帮助的主动性和过度介入。"
+    ],
+    "screenshots": [
+      {
+        "src": "",
+        "caption": "待加入脱敏截图：主动发现与每日输出"
+      }
+    ]
+  }
+]

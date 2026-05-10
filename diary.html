@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="苏济华的 AI Agent 工作流日记，持续记录 Agent 协作截图、主动型 AI 实验、Android Agent 设备侧实践和方法论复盘。"
+    />
+    <title>Agent 工作流日记 | 苏济华</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="./index.html" aria-label="返回首页">
+          <span class="brand-mark">A</span>
+          <span>Agent Workflow Diary</span>
+        </a>
+        <div class="nav-links">
+          <a href="./index.html">首页</a>
+          <a href="#diary">日记流</a>
+          <a href="#how-to-read">阅读方式</a>
+          <a href="https://github.com/susyimes" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="diary-hero">
+        <div class="section-inner">
+          <p class="eyebrow">Agent Workflow Diary</p>
+          <h1>把几十张截图整理成可持续追加的 Agent 工作流日记</h1>
+          <p class="lead">
+            这里按日期记录我与 AI Agent 的真实协作片段。每篇日记都围绕一个问题：这个截图说明了什么工作方式、什么工程判断、什么边界经验。
+          </p>
+        </div>
+      </section>
+
+      <section id="how-to-read" class="section compact">
+        <div class="section-inner">
+          <div class="grid three">
+            <article class="card">
+              <h3>先看场景</h3>
+              <p>截图不是证据堆砌，先说明当天要解决什么问题、为什么需要 Agent 参与。</p>
+            </article>
+            <article class="card">
+              <h3>再看互动</h3>
+              <p>记录 Agent 的拆解、工具调用、追问、错误恢复，以及人类如何接管关键判断。</p>
+            </article>
+            <article class="card">
+              <h3>最后看复盘</h3>
+              <p>每篇都要沉淀一个可复用经验，或说明一个失败边界、幻觉风险、上下文管理问题。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="diary" class="section">
+        <div class="section-inner">
+          <div class="section-head diary-head">
+            <div>
+              <p class="eyebrow">Entries</p>
+              <h2>日记流</h2>
+              <p>条目来自 `data/diary.json`，截图放在 `assets/screenshots/`。</p>
+            </div>
+            <label class="filter-box">
+              <span>筛选</span>
+              <select id="tagFilter" aria-label="按标签筛选日记">
+                <option value="all">全部</option>
+              </select>
+            </label>
+          </div>
+          <div id="entryList" class="entry-list" aria-live="polite">
+            <div class="card">
+              <h3>正在加载日记...</h3>
+              <p>如果你直接双击打开 HTML，请改用本地 HTTP 服务预览。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-inner">
+        <span>Agent Workflow Diary</span>
+        <span>截图先脱敏，再进入日记。</span>
+      </div>
+    </footer>
+
+    <script src="./scripts/diary.js"></script>
+  </body>
+</html>

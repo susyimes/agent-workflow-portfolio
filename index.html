@@ -18,8 +18,9 @@
           <span>Agent Workflow Portfolio</span>
         </a>
         <div class="nav-links">
+          <a href="#summary">总览</a>
           <a href="#workflow">工作流</a>
-          <a href="#gallery">截图案例</a>
+          <a href="./diary.html">日记</a>
           <a href="#projects">项目</a>
           <a href="#principles">边界</a>
           <a href="https://github.com/susyimes" target="_blank" rel="noreferrer">GitHub</a>
@@ -36,8 +37,8 @@
             这里整理我与 AI 编程 Agent、多 Agent 协作、Android 设备侧 Agent、主动型 AI 和情感型 Agent 的日常实践。每个案例都尽量说明场景、目标、Agent 行为、人的判断和最终边界。
           </p>
           <div class="hero-actions">
-            <a class="button" href="#gallery">查看截图案例</a>
-            <a class="button secondary" href="#projects">查看项目线索</a>
+            <a class="button" href="#summary">查看总览</a>
+            <a class="button secondary" href="./diary.html">进入日记</a>
           </div>
         </div>
 
@@ -76,6 +77,41 @@
                 <span>把有效方法、失败案例和判断标准写回可复用的个人上下文。</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="summary" class="section">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Overview Column</p>
+            <h2>总栏目：总结性内容与代表截图</h2>
+            <p>
+              这一栏给招聘方快速扫读：只放最能说明能力的总结、代表截图和项目线索。完整的日常互动、连续截图和复盘过程放到日记栏目里。
+            </p>
+          </div>
+          <div class="gallery">
+            <article class="shot">
+              <a class="shot-placeholder" href="./diary.html#multi-agent">代表截图：多 Agent 协作总览</a>
+              <div class="shot-body">
+                <h3>Agent 编排与复核</h3>
+                <p>展示任务拆解、角色分工、结果汇总、人工判断和失败兜底。</p>
+              </div>
+            </article>
+            <article class="shot">
+              <a class="shot-placeholder" href="./diary.html#android-agent">代表截图：Android 感知闭环</a>
+              <div class="shot-body">
+                <h3>移动端 Agent 底座</h3>
+                <p>展示设备状态采集、使用统计、权限链路和本地数据沉淀。</p>
+              </div>
+            </article>
+            <article class="shot">
+              <a class="shot-placeholder" href="./diary.html#proactive-ai">代表截图：主动型 AI 总结</a>
+              <div class="shot-body">
+                <h3>主动发现与陪伴</h3>
+                <p>展示低噪声发现、长期上下文和人机互动边界。</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -133,35 +169,13 @@
       <section id="gallery" class="section">
         <div class="section-inner">
           <div class="section-head">
-            <p class="eyebrow">Screenshot Cases</p>
-            <h2>截图案例位</h2>
+            <p class="eyebrow">Diary Column</p>
+            <h2>日记栏目：连续截图与过程复盘</h2>
             <p>
-              后续每张截图都会脱敏，并配上短说明。目标是展示工作流和判断方式，而不是展示隐私对话。
+              几十张截图会按日期进入独立日记页。每篇日记都包含场景、目标、Agent 行为、人的判断、结果和边界经验。
             </p>
           </div>
-          <div class="gallery">
-            <article class="shot">
-              <div class="shot-placeholder">待加入截图：多 Agent 任务分配</div>
-              <div class="shot-body">
-                <h3>任务编排</h3>
-                <p>说明 Host Agent 如何拆任务、分配角色、收集结果，并由人类做最终取舍。</p>
-              </div>
-            </article>
-            <article class="shot">
-              <div class="shot-placeholder">待加入截图：Android 自动化闭环</div>
-              <div class="shot-body">
-                <h3>感知与执行</h3>
-                <p>说明移动端如何采集状态、执行动作、处理失败，并把结果反馈给 Agent。</p>
-              </div>
-            </article>
-            <article class="shot">
-              <div class="shot-placeholder">待加入截图：主动发现日报</div>
-              <div class="shot-body">
-                <h3>主动型 AI</h3>
-                <p>说明 Agent 如何从上下文中发现模式，以低噪声方式提出提醒或下一步建议。</p>
-              </div>
-            </article>
-          </div>
+          <a class="button" href="./diary.html">打开 Agent 工作流日记</a>
         </div>
       </section>
 
