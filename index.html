@@ -1,272 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="苏济华的 AI Agent 工作流实践作品集，记录人类如何把经验、流程、创造力和执行权逐步交接给 AI。"
-    />
-    <title>苏济华 | 人类接力棒交给 AI</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav" aria-label="主导航">
-        <a class="brand" href="#top" aria-label="返回首页">
-          <span class="brand-mark">A</span>
-          <span>Agent Workflow Portfolio</span>
-        </a>
-        <div class="nav-links">
-          <a href="#summary">总览</a>
-          <a href="#workflow">工作流</a>
-          <a href="./diary.html">日记</a>
-          <a href="#projects">项目</a>
-          <a href="#principles">边界</a>
-          <a href="https://github.com/susyimes" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="苏济华的 AI Agent 工作流实践作品集，记录人类如何把经验、流程、创造力和执行权逐步交接给 AI。" />
+  <title>苏济华 | AI Agent Handoff Manifesto</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">Σ</span>
+        <span>Agent Handoff Portfolio</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#overview">总览</a>
+        <a href="#workflows">工作流</a>
+        <a href="./diary.html">日记</a>
+        <a href="#projects">项目</a>
+        <a href="#governance">治理</a>
+        <a href="https://github.com/susyimes" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div>
-          <p class="eyebrow">Human-to-AI Handoff Manifesto</p>
-          <h1 id="hero-title">记录人类把创造、判断与行动的接力棒交给 AI</h1>
-          <p class="lead">
-            这不是一个聊天截图相册，而是一份正在发生的人机交接观察笔记：当人类把经验写成上下文，把流程交给工具，把重复行动交给 Agent，我们如何重新定义创造、责任、边界、情感和判断。
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="#summary">查看总览</a>
-            <a class="button secondary" href="./diary.html">进入日记</a>
+  <main>
+    <section class="container hero">
+      <div class="hero-content">
+        <span class="eyebrow">Human-to-AI Handoff Manifesto</span>
+        <h1>记录人类把创造、判断与行动的接力棒交给 AI</h1>
+        <p class="lead">
+          这不是聊天截图相册，而是一份正在发生的人机交接观察：当人类把经验写成上下文，把流程交给工具，把重复行动交给 Agent，我们如何重新定义创造、责任与边界。
+        </p>
+        <div class="hero-actions">
+          <a href="#overview" class="button button-primary">查看总览</a>
+          <a href="./diary.html" class="button button-secondary">进入工作流日记</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="handoff-stage">
+          <div class="stage-icon">01</div>
+          <div class="stage-info">
+            <h4>隐性经验外化</h4>
+            <p>人类把直觉、偏好和价值判断从脑中提取，转化为可传递的文档与规则。</p>
           </div>
         </div>
-
-        <div class="hero-visual" aria-label="Agent 工作流示意">
-          <div class="visual-topbar" aria-hidden="true">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <div class="workflow-board">
-            <div class="lane capture">
-              <div class="lane-label">Human</div>
-              <div class="lane-card">
-                <strong>隐性经验</strong>
-                <span>人类把直觉、偏好、价值判断和失败教训从脑中取出。</span>
-              </div>
-            </div>
-            <div class="lane decide">
-              <div class="lane-label">Context</div>
-              <div class="lane-card">
-                <strong>可传递上下文</strong>
-                <span>经验被写成文档、截图、流程、规则、例外和长期记忆。</span>
-              </div>
-            </div>
-            <div class="lane execute">
-              <div class="lane-label">AI</div>
-              <div class="lane-card">
-                <strong>接棒行动</strong>
-                <span>AI 通过工具、代码、设备和自动化流程接住一部分行动权。</span>
-              </div>
-            </div>
-            <div class="lane">
-              <div class="lane-label">Govern</div>
-              <div class="lane-card">
-                <strong>人类再定位</strong>
-                <span>人类从执行者转向设问者、治理者、审美者和最终责任者。</span>
-              </div>
-            </div>
+        <div class="handoff-stage">
+          <div class="stage-icon">02</div>
+          <div class="stage-info">
+            <h4>上下文与工具交付</h4>
+            <p>经验变成 Harness，工具变成 API，Agent 获取执行所需的完整背景资料。</p>
           </div>
         </div>
-      </section>
-
-      <section id="summary" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="eyebrow">Overview Column</p>
-            <h2>总栏目：理念、框架与代表截图</h2>
-            <p>
-              这一栏放宏观叙事和代表截图：我如何理解人类到 AI 的接力棒交接，以及这些想法如何落到 Agent 编排、Android 设备感知、长期上下文和主动型 AI 实践里。
-            </p>
-          </div>
-          <div class="gallery">
-            <article class="shot">
-              <a class="shot-placeholder" href="./diary.html#multi-agent">代表截图：多 Agent 协作总览</a>
-              <div class="shot-body">
-                <h3>创造被流程化</h3>
-                <p>展示人类如何把模糊意图拆成任务、角色、证据和可复核结果。</p>
-              </div>
-            </article>
-            <article class="shot">
-              <a class="shot-placeholder" href="./diary.html#android-agent">代表截图：Android 感知闭环</a>
-              <div class="shot-body">
-                <h3>行动接入设备</h3>
-                <p>展示 AI 如何通过 Android 感知、权限、统计和自动化接近真实世界。</p>
-              </div>
-            </article>
-            <article class="shot">
-              <a class="shot-placeholder" href="./diary.html#proactive-ai">代表截图：主动型 AI 总结</a>
-              <div class="shot-body">
-                <h3>判断仍在人类</h3>
-                <p>展示主动发现、情感陪伴和长期记忆背后的信任、边界与责任问题。</p>
-              </div>
-            </article>
+        <div class="handoff-stage">
+          <div class="stage-icon">03</div>
+          <div class="stage-info">
+            <h4>AI 接棒行动</h4>
+            <p>Agent 承担拆解、计划、生成与修改，在定义的边界内自主完成执行任务。</p>
           </div>
         </div>
-      </section>
-
-      <section id="workflow" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="eyebrow">Workflow Map</p>
-            <h2>把宏大的交接叙事落到可复用工作流</h2>
-            <p>
-              截图和日记只是证据，真正要记录的是方法：经验如何变成上下文，流程如何变成 Harness，工具如何变成 AI 的手，人类如何保留判断和责任。
-            </p>
+        <div class="handoff-stage">
+          <div class="stage-icon">04</div>
+          <div class="stage-info">
+            <h4>人类回归治理</h4>
+            <p>人类从执行者转向设问者、审美者与最终责任人，负责验收与边界调优。</p>
           </div>
-          <div class="grid four grid two">
-            <article class="card">
-              <h3>编码 Agent 协作</h3>
-              <p>围绕需求拆解、代码库检索、改动计划、测试验证、review comment 和 handoff card 记录真实协作链路。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Overview Column</span>
+          <h2>总栏目：理念、框架与代表性证据</h2>
+          <p>这一栏目承载宏观叙事。展示我如何理解“接力棒”的交接，以及这些想法如何落到 Agent 编排、移动端感知、长期上下文和主动型 AI 的实践中。</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="shot-card">
+            <div class="shot-preview">创造被流程化</div>
+            <div class="shot-body">
+              <h3>任务拆解与 Handoff</h3>
+              <p>展示如何将模糊意图拆解为可流转的任务节点，通过上下文接力实现复杂产出。</p>
               <div class="tag-row">
-                <span class="tag">Codex</span>
-                <span class="tag">Kimi</span>
-                <span class="tag">Gemini</span>
+                <span class="tag">Multi-Agent</span>
+                <span class="tag">Workflow</span>
               </div>
-            </article>
-            <article class="card">
-              <h3>Android 设备侧 Agent</h3>
-              <p>把 AccessibilityService、UsageEvents、权限引导和本地状态沉淀成移动端 Agent 的感知与执行底座。</p>
+            </div>
+          </div>
+          <div class="shot-card">
+            <div class="shot-preview">行动接入设备</div>
+            <div class="shot-body">
+              <h3>Android 设备感知闭环</h3>
+              <p>当 Agent 拥有了 Android 辅助功能、使用统计与本地状态，它开始真正接近真实世界。</p>
               <div class="tag-row">
                 <span class="tag">Android</span>
                 <span class="tag">Accessibility</span>
-                <span class="tag">UsageStats</span>
               </div>
-            </article>
-            <article class="card">
-              <h3>主动型个人助理</h3>
-              <p>从被动问答走向观察、发现、提醒和低噪声协助，重点关注用户信任、权限边界和长期上下文。</p>
+            </div>
+          </div>
+          <div class="shot-card">
+            <div class="shot-preview">判断仍在人类</div>
+            <div class="shot-body">
+              <h3>主动发现与治理边界</h3>
+              <p>展示 Agent 如何在低噪声下主动提供建议，而人类如何决定是否跨越行动边界。</p>
               <div class="tag-row">
-                <span class="tag">Capture</span>
-                <span class="tag">Discovery</span>
-                <span class="tag">Assistance</span>
+                <span class="tag">Proactive AI</span>
+                <span class="tag">Governance</span>
               </div>
-            </article>
-            <article class="card">
-              <h3>Agent 方法论沉淀</h3>
-              <p>把稳定判断、可复用技能、Harness 结构和失败复盘写入长期上下文，形成可迭代的个人 Agent 工程体系。</p>
-              <div class="tag-row">
-                <span class="tag">Memory</span>
-                <span class="tag">Skill</span>
-                <span class="tag">Harness</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="eyebrow">Diary Column</p>
-            <h2>日记栏目：记录这场交接在日常中的证据</h2>
-            <p>
-              几十张截图会按日期进入独立日记页。每篇日记都回答一个问题：这一次，人类把什么交给了 AI，AI 接住了什么，人类又保留了什么。
-            </p>
-          </div>
-          <a class="button" href="./diary.html">打开 Agent 工作流日记</a>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="eyebrow">Project Threads</p>
-            <h2>支撑这些工作流的项目线索</h2>
-            <p>公开项目用于展示工程能力，私有项目只做脱敏功能说明。</p>
-          </div>
-          <div class="project-list">
-            <article class="project">
-              <div class="project-index">01</div>
-              <div>
-                <h3>MirrorAgent</h3>
-                <p>Android-first 主动型个人 Agent 助理，围绕 Capture、Memory、Discovery 和 Assistance 探索长期陪伴与低噪声主动发现。</p>
-              </div>
-            </article>
-            <article class="project">
-              <div class="project-index">02</div>
-              <div>
-                <h3>mirror-android</h3>
-                <p>Android 设备感知与统计底座，包含前台服务、UsageEvents、权限引导、本地快照和 Top App 分析。</p>
-              </div>
-            </article>
-            <article class="project">
-              <div class="project-index">03</div>
-              <div>
-                <h3>svmes-context</h3>
-                <p>Agent 方法论与长期上下文仓库，按 Memory、Skill、Harness、Experience 组织判断标准、技能、结构和复盘。</p>
-              </div>
-            </article>
-            <article class="project">
-              <div class="project-index">04</div>
-              <div>
-                <h3><a href="https://github.com/susyimes/TendrilFlow" target="_blank" rel="noreferrer">TendrilFlow</a></h3>
-                <p>本地编码 Agent 任务协作工作台，关注多 Agent 协作、trace、handoff、review 和可观察性。</p>
-              </div>
-            </article>
-            <article class="project">
-              <div class="project-index">05</div>
-              <div>
-                <h3><a href="https://github.com/susyimes/agent-harness-benchmark" target="_blank" rel="noreferrer">agent-harness-benchmark</a></h3>
-                <p>多语言 Agent 工程能力测试题库，关注代码理解、多文件修改、回归修复、测试补充和过程质量。</p>
-              </div>
-            </article>
-            <article class="project">
-              <div class="project-index">06</div>
-              <div>
-                <h3><a href="https://github.com/susyimes/yamen" target="_blank" rel="noreferrer">Yamen</a></h3>
-                <p>轻量多 Agent 协作架构探索，用角色治理、升级机制和复核触发降低编排成本。</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="principles" class="section">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="eyebrow">Safety & Boundary</p>
-            <h2>截图和案例的脱敏原则</h2>
-            <p>页面会尽量展示方法，不展示敏感内容。每个案例进入作品集前都需要过一遍边界检查。</p>
-          </div>
-          <div class="checklist">
-            <div class="check">
-              <strong>不放密钥</strong>
-              <span>隐藏 token、API Key、cookie、私有链接和账号信息。</span>
-            </div>
-            <div class="check">
-              <strong>不放公司代码</strong>
-              <span>业务代码、客户数据、内部路径和未公开需求全部脱敏。</span>
-            </div>
-            <div class="check">
-              <strong>不放隐私对话</strong>
-              <span>个人情绪、他人信息和未授权聊天记录不进入页面。</span>
-            </div>
-            <div class="check">
-              <strong>保留判断过程</strong>
-              <span>重点展示任务目标、Agent 行为、人类复核和边界经验。</span>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="section-inner">
-        <span>苏济华 · AI Agent 应用工程 / Android 架构</span>
-        <span>更新截图前先脱敏，保留方法，隐藏细节。</span>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section id="workflows" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Engineering Workflows</span>
+          <h2>把交接叙事落到可复用工作流</h2>
+          <p>截图只是证据，真正要记录的是方法。经验如何变成上下文，流程如何变成 Harness，工具如何变成 AI 的手。</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>编码 Agent 任务协作</h3>
+            <p>围绕需求拆解、代码库检索、改动计划、测试验证、Review Comment 和 Handoff Card 记录真实的 Agent 协作链路。重点在于如何让 Agent 理解工程上下文，以及人类如何在关键节点进行决策。</p>
+            <div class="tag-row">
+              <span class="tag">Codex</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Git Workflow</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Android 侧主动型 Agent</h3>
+            <p>利用 AccessibilityService、UsageEvents 和权限引导构建移动端感知底座。探索 Agent 如何基于用户当前的设备状态、应用切换模式和碎片化上下文，提供非侵入式的主动服务。</p>
+            <div class="tag-row">
+              <span class="tag">Android System</span>
+              <span class="tag">UsageStats</span>
+              <span class="tag">Device Context</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>长期上下文与个人记忆</h3>
+            <p>将稳定的判断标准、可复用技能和历史失败复盘沉淀为 Agent 的长期上下文。通过 Memory 系统让 Agent 随着与人类的交接深度增加而变得更加“懂我”。</p>
+            <div class="tag-row">
+              <span class="tag">Context</span>
+              <span class="tag">Memory</span>
+              <span class="tag">Experience</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Agent 工程能力基准</h3>
+            <p>构建面向真实工程场景的测试题库。验证 Agent 在代码理解、多文件修改、回归修复和测试补充中的表现，确保交接后的执行质量可量化、可追溯。</p>
+            <div class="tag-row">
+              <span class="tag">Harness</span>
+              <span class="tag">Benchmark</span>
+              <span class="tag">QA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Project Threads</span>
+          <h2>支撑交接的工程实践项目</h2>
+          <p>公开项目展示通用工程能力，私有项目展示特定领域的深度探索。</p>
+        </div>
+        <div class="project-list">
+          <article class="project-item is-private">
+            <span class="project-id">01</span>
+            <div>
+              <h3>MirrorAgent</h3>
+              <p>Android-first 主动型个人助理。通过感知设备上下文实现低噪声发现与提醒。</p>
+            </div>
+          </article>
+          <article class="project-item is-private">
+            <span class="project-id">02</span>
+            <div>
+              <h3>mirror-android</h3>
+              <p>设备感知底座。提供 UsageEvents 分析、权限引导与本地状态快照能力。</p>
+            </div>
+          </article>
+          <article class="project-item is-private">
+            <span class="project-id">03</span>
+            <div>
+              <h3>svmes-context</h3>
+              <p>方法论与长期上下文仓库。按 Skill、Harness 和 Experience 组织交接标准。</p>
+            </div>
+          </article>
+          <a href="https://github.com/susyimes/TendrilFlow" target="_blank" rel="noreferrer" class="project-item">
+            <span class="project-id">04</span>
+            <div>
+              <h3>TendrilFlow</h3>
+              <p>本地编码 Agent 协作工作台。关注多 Agent 的 Trace、Handoff 与可观察性。</p>
+            </div>
+          </a>
+          <a href="https://github.com/susyimes/agent-harness-benchmark" target="_blank" rel="noreferrer" class="project-item">
+            <span class="project-id">05</span>
+            <div>
+              <h3>agent-harness-benchmark</h3>
+              <p>多语言 Agent 工程能力题库。关注复杂工程场景下的自主执行质量。</p>
+            </div>
+          </a>
+          <a href="https://github.com/susyimes/yamen" target="_blank" rel="noreferrer" class="project-item">
+            <span class="project-id">06</span>
+            <div>
+              <h3>Yamen</h3>
+              <p>轻量多 Agent 协作架构。探索角色治理与自动化复核的最小化成本。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="governance" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Governance & Ethics</span>
+          <h2>在这场交接中，我们如何定义边界</h2>
+          <p>当 AI 接过行动权，人类必须更加严肃地对待治理。这不是简单的脱敏，而是对责任归属的深度思考。</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card">
+            <span class="mono" style="color: var(--accent-red)">SEC-01</span>
+            <h3 style="margin-top: 10px">密钥与凭证隔离</h3>
+            <p>截图和案例不暴露 token、cookie、API Key、私有链接和账号信息，敏感凭证不进入展示页面。</p>
+          </div>
+          <div class="card">
+            <span class="mono" style="color: var(--accent-blue)">PRIV-02</span>
+            <h3 style="margin-top: 10px">数据最小化交接</h3>
+            <p>只记录说明工作流所需的上下文，个人隐私、公司代码和第三方敏感信息进入日记前先脱敏。</p>
+          </div>
+          <div class="card">
+            <span class="mono" style="color: var(--accent-gold)">LIAB-03</span>
+            <h3 style="margin-top: 10px">责任人复核机制</h3>
+            <p>涉及代码合并、发布、权限、数据处理等关键动作时，保留人类确认、验收和追责位置。</p>
+          </div>
+          <div class="card">
+            <span class="mono" style="color: var(--accent-teal)">AUDT-04</span>
+            <h3 style="margin-top: 10px">决策链路可追溯</h3>
+            <p>保留可公开的任务摘要、工具调用线索、结果证据和复盘结论，方便后续改进 Agent Harness。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3 style="margin-bottom: 8px">Σ Agent Handoff Portfolio</h3>
+        <p class="footer-text">苏济华 · AI Agent 应用工程 / Android 架构</p>
+      </div>
+      <p class="footer-text">记录人类把创造、判断与行动的接力棒交给 AI。</p>
+    </div>
+  </footer>
+</body>
 </html>

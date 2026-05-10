@@ -1,49 +1,43 @@
-# Agent Workflow Portfolio
+# Agent Handoff Portfolio Σ
 
-Static GitHub Pages site for presenting AI Agent workflow practice, Android-first Agent experiments, and selected interaction screenshots.
+一个面向 AI Agent 应用工程岗位的个人作品集/理念站。
 
-## Update Screenshots
+## 核心叙事
+**“记录人类把创造、判断与行动的接力棒交给 AI”**
 
-1. Put desensitized images into `assets/screenshots/`.
-2. Add or edit an entry in `data/diary.json`.
-3. Keep each screenshot tied to one concrete point:
-   - scenario
-   - goal
-   - Agent action
-   - human judgment
-   - result
-   - boundary or lesson
+这不是聊天截图相册，而是一份正在发生的人机交接观察：当人类把经验写成上下文，把流程交给工具，把重复行动交给 Agent，我们如何重新定义自己在 AI 时代的位置。
 
-## Diary Entry Format
+## 项目结构
+- `index.html`: 总栏目。展示理念框架、代表性证据和核心项目线索。
+- `diary.html`: 日记存档。用于承载几十张脱敏截图，按日期记录真实的交接证据。
+- `data/diary.json`: 日记数据管理中心。
+- `scripts/diary.js`: 日记流动态渲染逻辑。
+- `styles.css`: 采用 "Engineer Archive" 设计风格的全局样式。
+- `assets/screenshots/`: 存放脱敏后的截图证据。
 
-```json
-{
-  "id": "2026-05-10-example",
-  "date": "2026-05-10",
-  "title": "多 Agent 协作工作流复盘",
-  "type": "workflow",
-  "tags": ["Codex", "Harness", "Review"],
-  "summary": "这一天验证了一个多 Agent 拆解、执行、复核的工作流。",
-  "notes": [
-    "场景：需要处理一个复杂项目任务。",
-    "Agent 行为：拆解任务、读取代码、产出补丁。",
-    "人的判断：确认边界、复核风险、决定是否合并。"
-  ],
-  "screenshots": [
-    {
-      "src": "assets/screenshots/example.png",
-      "caption": "脱敏后的任务编排截图"
-    }
-  ]
-}
-```
+## 如何添加新记录
+1. **脱敏截图**: 将截图证据放入 `assets/screenshots/`，确保隐藏所有敏感信息。
+2. **编辑数据**: 在 `data/diary.json` 中添加一个新对象：
+   ```json
+   {
+     "id": "unique-id",
+     "date": "YYYY-MM-DD",
+     "title": "记录标题",
+     "type": "类型(engineering/reflection/etc)",
+     "tags": ["标签1", "标签2"],
+     "summary": "简短摘要",
+     "notes": ["关键点1", "关键点2"],
+     "screenshots": [
+       { "src": "./assets/screenshots/your-image.png", "caption": "截图描述" }
+     ]
+   }
+   ```
+3. **预览**: 使用本地 HTTP 服务预览，例如 `python -m http.server 8080`。
 
-## Local Preview
+## 设计原则
+- **专业克制**: 避免花哨装饰，保持工程师档案的清晰与可信。
+- **叙事优先**: 每一张截图都必须体现“交接”的过程或复盘。
+- **脱敏第一**: 严禁上传包含密钥、个人隐私或公司机密代码的原始截图。
 
-Use a tiny local server so `diary.html` can load `data/diary.json`:
-
-```powershell
-python -m http.server 8080
-```
-
-Then open `http://localhost:8080`.
+---
+苏济华 · AI Agent 应用工程 / Android 架构

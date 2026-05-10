@@ -84,5 +84,24 @@
         "caption": "待加入脱敏截图：主动发现与每日输出"
       }
     ]
+  },
+  {
+    "id": "agent-trace",
+    "date": "2026-05-11",
+    "title": "Agent 决策链路的可追溯性实验",
+    "type": "engineering",
+    "tags": ["Trace", "Observability", "Governance"],
+    "summary": "通过 TendrilFlow 记录 Agent 的思维链（CoT）与工具调用序列，确保交接后的每一个动作都有据可查。",
+    "notes": [
+      "问题：Agent 的自主行动往往是黑盒，人类难以追责。",
+      "方案：在 Harness 层拦截所有 LLM 响应，记录原始 Prompt、输出与中间状态。",
+      "结果：成功在本地 Dashboard 展示了完整的任务执行链路，方便复盘幻觉风险。"
+    ],
+    "screenshots": [
+      {
+        "src": "",
+        "caption": "待加入脱敏截图：Agent 思维链路追踪"
+      }
+    ]
   }
 ]
