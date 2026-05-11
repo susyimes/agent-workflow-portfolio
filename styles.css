@@ -394,30 +394,22 @@ select:focus { border-color: var(--cyan); box-shadow: var(--glow-cyan); }
 .entry-more-note { color: var(--text-muted) !important; font-style: italic; }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-.tag { font-size: 0.65rem; padding: 4px 8px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-dim); border-radius: 2px; color: var(--text-muted); text-transform: uppercase; }
+.tag { font-size: 0.65rem; padding: 4px 8px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-dim); border-radius: 2px; color: var(--text-muted); }
 
 .entry-evidence-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 20px;
 }
-.entry-evidence-grid img, .evidence-placeholder, .evidence-more {
+.entry-evidence-grid img, .evidence-more {
   width: 100%; aspect-ratio: 4/3; object-fit: cover;
   border: 1px solid var(--border-dim); border-radius: 4px;
   background: rgba(0,0,0,0.5);
   transition: all 0.3s;
 }
 .entry-evidence-grid img:hover { border-color: var(--cyan); filter: brightness(1.2); }
-.evidence-placeholder, .evidence-more {
+.evidence-more {
   display: grid; place-items: center; font-size: 0.65rem; font-family: var(--font-mono);
   color: var(--text-muted); text-align: center; padding: 8px; background: repeating-linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 10px, rgba(0,240,255,0.02) 10px, rgba(0,240,255,0.02) 20px);
 }
-
-.entry-footer {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 12px 20px; background: rgba(0, 0, 0, 0.3); border-top: 1px solid var(--border-dim);
-}
-.entry-shots-count { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); }
-.entry-anchor { font-size: 0.75rem; color: var(--cyan); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0; transition: text-shadow 0.2s; }
-.entry-anchor:hover { text-shadow: var(--glow-cyan); }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -525,5 +517,14 @@ select:focus { border-color: var(--cyan); box-shadow: var(--glow-cyan); }
     overflow-wrap: anywhere;
     text-overflow: clip;
     white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 32px);
+    max-width: 344px;
+    margin-left: 16px;
+    margin-right: auto;
   }
 }

@@ -14,21 +14,50 @@ const escapeHtml = (value = "") =>
 const formatTags = (tags) =>
   tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
 
+const typeLabels = {
+  affective: "情感",
+  android: "Android",
+  architecture: "架构",
+  automation: "自动化",
+  boundary: "边界",
+  builder: "构建",
+  comparison: "对比",
+  concept: "概念",
+  "code-intelligence": "代码理解",
+  engineering: "工程",
+  harness: "Harness",
+  memory: "记忆",
+  "mobile-ui": "移动界面",
+  organization: "组织",
+  orchestration: "编排",
+  proactive: "主动",
+  product: "产品",
+  recovery: "修复",
+  reference: "参照",
+  reflection: "思考",
+  research: "研究",
+  review: "审查",
+  skill: "Skill",
+  theme: "主线",
+  tooling: "工具",
+  toolchain: "工具链",
+  workflow: "流程",
+};
+
 const renderEvidence = (screenshots = []) => {
-  if (!screenshots.length) {
+  const validShots = screenshots.filter((shot) => shot.src);
+
+  if (!validShots.length) {
     return "";
   }
 
-  const visibleShots = screenshots.slice(0, 3);
-  const remaining = screenshots.length - visibleShots.length;
+  const visibleShots = validShots.slice(0, 3);
+  const remaining = validShots.length - visibleShots.length;
 
   return `
     <div class="entry-evidence-grid">
       ${visibleShots.map((shot) => {
         const caption = escapeHtml(shot.caption || "脱敏截图");
-        if (!shot.src) {
-          return `<div class="evidence-placeholder">${caption}</div>`;
-        }
         return `<img src="${escapeHtml(shot.src)}" alt="${caption}" loading="lazy" />`;
       }).join("")}
       ${remaining > 0 ? `<div class="evidence-more">+${remaining}</div>` : ""}
@@ -41,26 +70,26 @@ const renderEntries = (entries, selectedTag = "all") => {
     ? entries
     : entries.filter((entry) => entry.tags.includes(selectedTag));
 
-  statsCounter.textContent = `ARCHIVE_SIZE: ${visibleEntries.length} ENTRIES`;
+  statsCounter.textContent = `${visibleEntries.length} 条记录`;
 
   if (visibleEntries.length === 0) {
     entryList.innerHTML = `
       <div class="card archive-loading">
-        <h3 class="mono">NO MATCHING RECORDS</h3>
-        <p>换一个标签，或稍后继续追加日记。</p>
+        <h3>没有匹配记录</h3>
+        <p>换一个筛选条件，或稍后继续追加。</p>
       </div>
     `;
     return;
   }
 
   entryList.innerHTML = visibleEntries.map((entry) => {
-    const shotCount = entry.screenshots ? entry.screenshots.length : 0;
+    const typeLabel = typeLabels[entry.type] || entry.type;
 
     return `
       <article id="${escapeHtml(entry.id)}" class="entry-card">
         <div class="entry-top">
           <span class="entry-date">${escapeHtml(entry.date)}</span>
-          <span class="entry-type">${escapeHtml(entry.type)}</span>
+          <span class="entry-type">${escapeHtml(typeLabel)}</span>
         </div>
         <div class="entry-main">
           <h3>${escapeHtml(entry.title)}</h3>
@@ -71,10 +100,6 @@ const renderEntries = (entries, selectedTag = "all") => {
           </ul>
           <div class="tag-row">${formatTags(entry.tags)}</div>
           ${renderEvidence(entry.screenshots)}
-        </div>
-        <div class="entry-footer">
-          <span class="entry-shots-count mono">${shotCount} EVIDENCE_SHOTS</span>
-          <a href="#${escapeHtml(entry.id)}" class="entry-anchor mono">ANCHOR</a>
         </div>
       </article>
     `;
@@ -101,7 +126,6 @@ fetch("./data/diary.json")
     return response.json();
   })
   .then((entries) => {
-    // Sort entries by date descending
     entries.sort((a, b) => new Date(b.date) - new Date(a.date));
     hydrateFilters(entries);
     renderEntries(entries);
@@ -109,7 +133,7 @@ fetch("./data/diary.json")
   .catch((error) => {
     entryList.innerHTML = `
       <div class="card archive-loading">
-        <h3 class="accent-red">ARCHIVE_ACCESS_DENIED</h3>
+        <h3>记录加载失败</h3>
         <p>${escapeHtml(error.message)}</p>
       </div>
     `;
