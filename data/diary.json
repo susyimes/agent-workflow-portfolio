@@ -287,24 +287,6 @@
     ]
   },
   {
-    "id": "wuni-memory-assistant",
-    "date": "2026-04-18",
-    "title": "雾尼：掌管记忆的手机助手",
-    "type": "product",
-    "tags": [
-      "MirrorAgent",
-      "Memory",
-      "Mobile Agent",
-      "Persona"
-    ],
-    "summary": "把“雾尼”定位为掌管记忆的手机助手，探索长期记忆、角色设定和移动端主动协助。",
-    "notes": [
-      "定位：不是单纯聊天机器人，而是手机侧记忆与行动入口。",
-      "能力：保存上下文、理解用户偏好、在合适时机提醒或协助。",
-      "设计：需要人格边界、记忆边界和权限边界同时成立。"
-    ]
-  },
-  {
     "id": "autodream-skill-composition",
     "date": "2026-04-20",
     "title": "AutoDream 的 Skill 组合",
@@ -356,25 +338,6 @@
       "问题：Skills 越多，模型上下文负担越大，性能可能下降。",
       "方向：把常用策略抽成更轻的 Gene，而不是把所有流程都塞成长 Skill。",
       "应用：Skill 系统需要路由、裁剪、摘要和性能观测。"
-    ]
-  },
-  {
-    "id": "plan-led-agent",
-    "date": "2026-04-23",
-    "title": "Plan-led Agent 与 Android Client",
-    "type": "android",
-    "tags": [
-      "Plan-led Agent",
-      "Android",
-      "Kimi",
-      "Codex",
-      "MirrorAgent"
-    ],
-    "summary": "把 kimi、codex、MirrorAgent 和 Android client 连接起来，探索由计划驱动的移动端 Agent。",
-    "notes": [
-      "方向：Agent 先形成计划，再通过 Android Client 获取状态和执行动作。",
-      "组合：Kimi 负责某些交互能力，Codex 负责工程实现，MirrorAgent 负责记忆与人格入口。",
-      "目标：手机不是被动终端，而是 Agent 可感知、可执行、可复盘的环境。"
     ]
   },
   {
@@ -504,24 +467,6 @@
     ]
   },
   {
-    "id": "dreamx-proactive-window",
-    "date": "2026-04-29",
-    "title": "DreamX 主动悬浮窗与人格化触达",
-    "type": "proactive",
-    "tags": [
-      "DreamX",
-      "Proactive AI",
-      "Floating Window",
-      "Persona"
-    ],
-    "summary": "通过主动弹出悬浮窗与用户交互，并给 Agent 暴露相关 tool，让人格型 Agent 可以主动联系用户。",
-    "notes": [
-      "问题：主动型 AI 需要一个低摩擦但不打扰的触达入口。",
-      "方案：悬浮窗承载轻量提醒、确认、任务建议和上下文补充。",
-      "边界：需要明确触发条件、静默时段、撤销方式和隐私保护。"
-    ]
-  },
-  {
     "id": "symphony-task-center",
     "date": "2026-04-30",
     "title": "Symphony：让 Codex 自己接单干活",
@@ -537,24 +482,6 @@
       "问题：Agent 的任务入口分散，难以形成可追踪生产流。",
       "方案：用看板作为任务源，让 Codex 按状态领取、执行和交付。",
       "价值：这是从助手到团队成员的工作流转变。"
-    ]
-  },
-  {
-    "id": "mirroragent-memory-tools",
-    "date": "2026-04-30",
-    "title": "MirrorAgent 的待办、记忆与 Tools",
-    "type": "memory",
-    "tags": [
-      "MirrorAgent",
-      "Memory",
-      "Tools",
-      "Todo"
-    ],
-    "summary": "把今日待办、长期记忆和工具入口放进 MirrorAgent，形成日常 Agent 的基础控制台。",
-    "notes": [
-      "问题：主动 Agent 需要知道今天要做什么、长期记得什么、能调用什么工具。",
-      "方向：Todo、Memory、Tools 三个区域共同构成行动前的上下文面板。",
-      "待复核：原图该区域 OCR 噪声较高，后续可补一张清晰脱敏截图。"
     ]
   },
   {
@@ -576,24 +503,6 @@
     ]
   },
   {
-    "id": "dreamx-home-rebuild",
-    "date": "2026-05-02",
-    "title": "DreamX 与雾尼首页功能改造",
-    "type": "product",
-    "tags": [
-      "DreamX",
-      "MirrorAgent",
-      "Product",
-      "Mobile Agent"
-    ],
-    "summary": "围绕雾尼产品名、DreamX 和首页功能改造，继续把移动端 Agent 从概念推进到可用产品形态。",
-    "notes": [
-      "目标：首页不只是入口列表，而是人机协作状态的聚合面板。",
-      "内容：记忆、待办、主动提醒、人格状态和工具调用需要统一呈现。",
-      "待复核：部分文件系统/Agent 工具链对比记录 OCR 质量较差，后续补清晰截图。"
-    ]
-  },
-  {
     "id": "agent-miniapp-builder",
     "date": "2026-05-03",
     "title": "让 Agent 构建模型智能小程序",
@@ -609,42 +518,6 @@
       "问题：很多任务需要临时 UI 和临时工具，但不值得人工完整开发。",
       "方案：开放接口能力，让 Agent 生成小程序、连接模型、执行任务。",
       "边界：生成的小程序需要权限声明、数据边界和可撤销机制。"
-    ]
-  },
-  {
-    "id": "agent-permission-boundary",
-    "date": "2026-05-03",
-    "title": "定闹钟暴露出的权限边界",
-    "type": "boundary",
-    "tags": [
-      "Permission",
-      "Mobile Agent",
-      "Todo",
-      "Governance"
-    ],
-    "summary": "Agent 可以记录待办并在 Mirror 中提醒，但不能直接操作系统闹钟和日历，体现移动端权限边界。",
-    "notes": [
-      "问题：用户希望 Agent 定闹钟，但当前权限不足。",
-      "可行：记录待办、在应用内提醒、提示用户用系统助手设置。",
-      "启发：权限边界需要产品化表达，而不是让 Agent 假装能做。"
-    ]
-  },
-  {
-    "id": "macro-prediction-skill",
-    "date": "2026-05-04",
-    "title": "宏观趋势预测 AI Skill",
-    "type": "skill",
-    "tags": [
-      "AI Skill",
-      "Prediction",
-      "Signal",
-      "Decision Support"
-    ],
-    "summary": "把第三次世界大战概率、黄金、AI 泡沫等宏观问题，转成基于交易信号和趋势分析的 AI Skill。",
-    "notes": [
-      "问题：宏观判断容易变成玄学问答。",
-      "方案：引入金融交易信号、趋势指标和置信区间，让 Skill 做辅助判断。",
-      "边界：这类 Skill 只能做决策支持，不能替代高风险投资判断。"
     ]
   },
   {
@@ -667,24 +540,6 @@
     ]
   },
   {
-    "id": "ios-simulator-codex",
-    "date": "2026-05-06",
-    "title": "把 iOS 模拟器嵌进 Codex",
-    "type": "tooling",
-    "tags": [
-      "Codex",
-      "iOS Simulator",
-      "Mobile Agent",
-      "Tooling"
-    ],
-    "summary": "发现一个能把 iOS 模拟器嵌进 Codex 侧边面板的工具，说明移动端调试环境正在接近 Agent 工作台。",
-    "notes": [
-      "问题：移动端 Agent 开发需要看到真实设备状态。",
-      "方向：把模拟器、日志、操作入口和代码编辑放进同一个协作界面。",
-      "价值：减少上下文切换，提高 Agent 对移动端问题的感知能力。"
-    ]
-  },
-  {
     "id": "heavy-skill-agent-inner-work",
     "date": "2026-05-07",
     "title": "Heavy Skill：重度思考是 Agent 的内功",
@@ -700,24 +555,6 @@
       "问题：Agent 不能只靠更复杂的编排框架，也要提高自身推理质量。",
       "方案：用重度思考、并行推理和审议汇总提升计划质量。",
       "定位：Heavy Skill 更像底层心法，而不是单次工具调用。"
-    ]
-  },
-  {
-    "id": "wuni-floating-window",
-    "date": "2026-05-07",
-    "title": "雾尼悬浮窗、边界和主动通知",
-    "type": "mobile-ui",
-    "tags": [
-      "MirrorAgent",
-      "Floating Window",
-      "Proactive AI",
-      "Boundary"
-    ],
-    "summary": "继续打磨雾尼/DreamX 的身份、记忆、边界、悬浮窗和主动通知方案。",
-    "notes": [
-      "问题：人格 Agent 要主动出现，但不能越界。",
-      "设计：悬浮窗展示轻量结果、提醒和后续选项，同时保留用户控制权。",
-      "待复核：原 OCR 对该区域识别不稳定，后续适合补一张清晰脱敏图。"
     ]
   },
   {
@@ -753,41 +590,6 @@
       "问题：当模型越来越强，人的差异在哪里？",
       "判断：真正的能力不是会不会问模型，而是能否提出有结构的问题和判断标准。",
       "延展：多模型、多 Agent、长记忆和真实工具环境可能带来新的涌现现象。"
-    ]
-  },
-  {
-    "id": "self-model-consciousness",
-    "date": "2026-05-10",
-    "title": "持续的自我模型",
-    "type": "reflection",
-    "tags": [
-      "Self Model",
-      "AI Psychology",
-      "Consciousness",
-      "Persona"
-    ],
-    "summary": "围绕 LLM、意识、自我模型和人格连续性，记录情感型 Agent 的长期研究线索。",
-    "notes": [
-      "问题：人格 Agent 的连续性来自哪里，是记忆、目标、关系还是自我叙事？",
-      "方向：持续的自我模型可能比一次性人设更重要。",
-      "应用：MirrorAgent / 雾尼这类产品需要把自我模型做成可维护、可修正的结构。"
-    ]
-  },
-  {
-    "id": "proactive-ai",
-    "date": "2026-05-10",
-    "title": "主动型 AI 的低噪声发现",
-    "type": "reflection",
-    "tags": [
-      "MirrorAgent",
-      "Memory",
-      "Proactive AI"
-    ],
-    "summary": "展示 Agent 如何从个人上下文里做少量、高信号的发现，而不是频繁打扰用户。",
-    "notes": [
-      "场景：用户没有主动提问，但近期上下文里出现了值得提醒的模式。",
-      "Agent 行为：生成简短发现，提供下一步选项，而不是替用户做强决策。",
-      "人的判断：区分有帮助的主动性和过度介入。"
     ]
   }
 ]
